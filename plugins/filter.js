@@ -132,8 +132,7 @@ const array = ['maddy','name entha','Helo','King','Kooi','Love','Thamasha','big 
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
-       await message.client.sendMessage(message.jid, fs.readFileSync('./uploads/media/' + a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: true})
-}
+       await message.client.sendMessage(message.jid, fs.readFileSync('./maddy/' + a + '.mp3'), MessageType.audio, { mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: true})}
 });
     }
 
